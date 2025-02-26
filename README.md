@@ -1,40 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 3D Arm Rotation - Next.js & Three.js
 
-## Getting Started
+## Overview
+This project is a **Next.js** web page that uses **Three.js** and **@react-three/fiber** to render a simple 3D **arm model** with rotation handles at the **shoulder** and **elbow** joints. Users can **click and drag** the handles to adjust the arm's pose, with real-time transformations.
 
-First, run the development server:
+## Features
+✅ Interactive 3D arm with shoulder and elbow joints  
+✅ Drag-to-rotate functionality for adjusting pose  
+✅ Smooth real-time transformations  
+✅ Clean, minimal UI with Tailwind CSS  
 
-```bash
+## Tech Stack
+- **Next.js** - Frontend framework  
+- **Three.js** - 3D rendering and interaction  
+- **Tailwind CSS** - Styling  
+
+
+## Installation & Setup
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/yourusername/arm-rotation.git
+cd arm-rotation
+```
+### 2️⃣ Install Dependencies
+```sh
+npm install
+```
+### 3️⃣ Run the Development Server
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+
+## Live Demo
+🌐 Check out the live demo: [3D Arm Rotation](https://internship-project-steel.vercel.app/)
+
+## Deployment
+This project is deployed on [Vercel](https://vercel.com), a platform optimized for Next.js applications.
+
+### To deploy your own instance:
+1. Fork this repository
+2. Create a Vercel account
+3. Import your forked repository
+4. Vercel will automatically detect Next.js and deploy your application
+
+The deployment process is automated through Vercel's GitHub integration, with automatic deployments on every push to the main branch.
+
+
+## Project Structure
+```
+arm-rotation/
+│── pages/
+│   ├── index.js  # Main page rendering the 3D arm
+│── components/
+│   ├── ArmScene.js  # Three.js-based arm model
+│── styles/
+│   ├── globals.css  # Tailwind CSS setup
+│── public/
+│── package.json
+│── tailwind.config.js
+│── README.md  # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How It Works
+### 🦾 3D Arm Model
+- **Upper Arm:** Gray cylinder (extends from the shoulder).
+- **Lower Arm:** Light gray cylinder (attached to the upper arm).
+- **Handles:** Blue spheres at **shoulder** and **elbow**.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 🖱️ Interaction Logic
+1. **Click & Drag a handle** (shoulder or elbow).
+2. **Mouse movement** updates rotation in real time.
+3. **Shoulder Handle** rotates the upper arm around the **Y-axis**.
+4. **Elbow Handle** rotates the lower arm around its **local Y-axis**.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Submission Instructions
+1. **Push code to a private GitHub repository**.
+2. **Invite yash.aocorp@gmail.com** as a collaborator.
+3. **Ensure README.md** is included.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## Future Improvements
+🚀 Add inverse kinematics for more natural movement  
+🎨 Improve UI/UX for better usability  
+📱 Make it responsive for mobile interaction  
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
+### 🛠 Built with passion using **Next.js, Three.js, and Tailwind CSS** 🚀
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
