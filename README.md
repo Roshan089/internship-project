@@ -49,17 +49,29 @@ The deployment process is automated through Vercel's GitHub integration, with au
 
 ## Project Structure
 ```
-arm-rotation/
-│── pages/
-│   ├── index.js  # Main page rendering the 3D arm
-│── components/
-│   ├── ArmScene.js  # Three.js-based arm model
-│── styles/
-│   ├── globals.css  # Tailwind CSS setup
-│── public/
-│── package.json
-│── tailwind.config.js
-│── README.md  # Project documentation
+internship-project/
+│── src/
+│   ├── components/
+│   │   ├── ArmScene.js        # Main 3D scene component
+│   │   │   ├── Arm/
+│   │   │   │   ├── UpperArm.js    # Upper arm component
+│   │   │   │   └── LowerArm.js    # Lower arm component
+│   │   │   └── Controls/
+│   │   │       └── RotationHandle.js # Handle for rotation control
+│   │   ├── pages/
+│   │   │   ├── index.js           # Main page
+│   │   │   ├── _app.js            # Next.js app wrapper
+│   │   │   ├── _document.js       # Custom document setup
+│   │   │   └── api/               # API routes
+│   │   └── styles/
+│   │   └── globals.css        # Tailwind CSS setup
+│   └── public/                    # Static assets
+│   └── package.json              # Project dependencies
+│   └── tailwind.config.mjs       # Tailwind configuration
+│   └── next.config.mjs           # Next.js configuration
+│   └── postcss.config.mjs        # PostCSS configuration
+│   └── jsconfig.json             # JavaScript configuration
+└── README.md                # Project documentation
 ```
 
 ## How It Works
